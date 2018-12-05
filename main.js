@@ -18,8 +18,17 @@ let painel = [];
 
 function buttClick(valor) {
     console.log(
-        valor
+        valor                       // Mostra o valor referente ao botão clicado
     )
-    painel.push(valor)
-    document.getElementById("out_p").innerHTML = valor
+    if (painel.length <= 8){
+        painel.push(valor)              // Add o valor do botão à lista Painel
+        document.getElementById("out_p").innerHTML = painel      // Mostra a sequencia de números clicados
+
+    }
+}
+
+function buttCE() {
+    painel.pop();                                            // Apaga o Ultimo número
+    document.getElementById("out_p").innerHTML = painel      // Mostra a sequencia de números clicados
+
 }
